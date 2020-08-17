@@ -1,0 +1,59 @@
+.activities {
+    padding: 70px 0;
+
+    @include breakpoint(medium down) {
+        padding: 50px 0;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        margin: 0 -35px;
+        padding: 0;
+
+        @include breakpoint(medium down) {
+            margin: 0;
+        }
+    }
+
+    &__item {
+        margin-top: 30px;
+        padding: 70px 35px 30px;
+        position: relative;
+        text-align: center;
+        width: 25%;
+
+        @include breakpoint(medium down) {
+            margin-top: 20px;
+            padding: 70px 10px 20px;
+        }
+
+        @include breakpoint(small down) {
+            margin-top: 10px;
+            padding: 60px 10px 15px;
+            width: 50%;
+        }
+
+        &::before {
+            @include absolute(0, null, null, 50%);
+            color: lighten($color-black, 39.61);
+            content: attr(data-fa-icon);
+            font-family: $font-awesome;
+            font-size: 5rem;
+            font-weight: 700;
+            transform: translateX(-50%);
+
+            @include breakpoint(small down) {
+                font-size: 4rem;
+            }
+        }
+    }
+
+    &__title {
+        color: lighten($color-black, 9.80);
+        font-size: 1.2rem;
+        margin: 0 0 15px;
+        text-transform: uppercase;
+    }
+}

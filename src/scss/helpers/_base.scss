@@ -1,0 +1,140 @@
+$color-white: #fff;
+$color-black: #000;
+$color-green: #39a38f;
+
+//Colors
+$color-1--1: #1240AB; //#10C9C3;
+$color-1--2: #171717;
+$color-1--3: #f6f6f6;
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: inherit;
+    }
+}
+
+body {
+    color: $color-1--2;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    font-family: $typo-1;
+    background: $color-1--3;
+    width: 100%;
+
+}
+
+%clearfix {
+    &::after {
+        content: '';
+        display: table;
+        width: 100%;
+        clear: both;
+    }
+}
+
+div {
+    box-sizing: border-box;
+}
+
+.site-wrapper {
+    margin: 0 auto;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.site-main {
+    margin: 0 auto;
+    //max-width: 192rem;
+}
+
+.container {
+    max-width: 126rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+
+    @include breakpoint(medium down) {
+        max-width: 98rem;
+        padding: 0 2rem;
+    }
+
+    @include breakpoint(small down) {
+        max-width: 100%;
+        padding: 0 1rem;
+    }
+
+    &.-xs {
+        max-width: 110rem;
+    }
+}
+
+.btn {
+    background-color: $color-1--1;
+    border: none;
+    color: $color-white;
+    cursor: pointer;
+    display: inline-block;
+    font-family: $typo-1;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin: 3rem auto 0;
+    padding: 20px 50px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 250ms ease-in-out;
+
+    @include on-event() {
+        background-color: $color-1--2;
+    }
+}
+
+.hidden {
+    border: 0 !important;
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px !important;
+    left: -9999px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    top: auto !important;
+    width: 1px !important;
+}
+
+.js-hidden {
+    display: none;
+}
+
+.sr-only {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.title {
+    color: lighten($color-black, 9.02);
+    font-size: 3rem;
+    line-height: 1;
+    margin: 0 0 30px;
+}
+
+.text {
+    color: lighten($color-black, 28.63);
+    font-family: $typo-2;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    margin: 0;
+
+    & + & {
+        margin-top: 30px;
+    }
+}

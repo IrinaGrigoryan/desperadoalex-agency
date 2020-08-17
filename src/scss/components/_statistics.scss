@@ -1,0 +1,114 @@
+.statistics {
+    background-color: $color-1--1;
+    color: $color-white;
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding: 10rem 0;
+    text-transform: uppercase;
+    $this: &;
+
+    @include breakpoint(medium down) {
+        padding: 5rem 0;
+    }
+
+    @include breakpoint(small down) {
+        font-size: 1.4rem;
+        padding: 3rem 0;
+    }
+
+    &__list {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        @include breakpoint(medium down) {
+            flex-wrap: wrap;
+            margin: 0 auto;
+            max-width: 73rem;
+        }
+    }
+
+    &__item {
+        padding-right: 7rem;
+
+        @include breakpoint(medium down) {
+            padding: 1.5rem 4rem;
+            width: 50%;
+        }
+
+        @include breakpoint(small down) {
+            padding: 1.5rem 2rem;
+        }
+
+        @include breakpoint(xsmall down) {
+            width: 100%;
+        }
+
+        &:first-child {
+            #{$this}__item-content {
+                &::before {
+                    content: '\f0b1';
+                }
+            }
+        }
+
+        &:nth-child(2) {
+            #{$this}__item-content {
+                &::before {
+                    content: '\f017';
+                }
+            }
+        }
+
+        &:nth-child(3) {
+            #{$this}__item-content {
+                &::before {
+                    content: '\f005';
+                }
+            }
+        }
+
+        &:nth-child(4) {
+            #{$this}__item-content {
+                &::before {
+                    content: '\f004';
+                }
+            }
+        }
+    }
+
+    &__item-content {
+        margin: 0;
+        padding: 0 0 0 7rem;
+        position: relative;
+
+        @include breakpoint(small down) {
+            padding: 0 0 0 6rem;
+        }
+
+        &::before {
+            @include absolute(50%, null, null, 0);
+            color: $color-white;
+            content: '';
+            font-family: $font-awesome;
+            font-size: 5.5rem;
+            transform: translateY(-50%);
+
+            @include breakpoint(small down) {
+                font-size: 4.5rem;
+            }
+        }
+    }
+
+    &__item-number {
+        display: block;
+        font-size: 2.8rem;
+        margin: 0 0 1rem;
+
+        @include breakpoint(small down) {
+            font-size: 2.4rem;
+            margin: 0 0 0.5rem;
+        }
+    }
+}

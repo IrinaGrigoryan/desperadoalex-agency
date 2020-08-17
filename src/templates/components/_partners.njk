@@ -1,0 +1,13 @@
+<div class="partners">
+    <div class="container">
+        <div class="partners__wrapper">
+            <ul class="partners__list">
+                {% for item in range(5) %}
+                    <li class="partners__item">
+                        <img src="./images/partner-{{ loop.index }}.png" alt="Partner">
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>

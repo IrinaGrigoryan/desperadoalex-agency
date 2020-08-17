@@ -1,0 +1,19 @@
+<section class="gallery">
+    <h2 class="hidden">Portfolio gallery</h2>
+    <div class="gallery__wrap">
+        <ul class="gallery__list">
+            {% for item in range(12) %}
+                <li class="gallery__item">
+                    <a href="single-project.html" class="gallery__link">
+                        <picture class="gallery__picture">
+                            <img src="https://picsum.photos/id/{{ range (10, 1000) | random }}/768/676" alt="Portfolio work">
+                        </picture>
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+        <div class="gallery__btn-wrap">
+            <button type="button" class="gallery__btn">Load more work</button>
+        </div>
+    </div>
+</section>

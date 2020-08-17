@@ -1,0 +1,24 @@
+{% set skillsData = [
+    ['UI/UX Design', '75'],
+    ['Web development', '90'],
+    ['Marketing', '65']
+] %}
+
+<section class="skills">
+    <div class="container">
+        <div class="skills__wrapper">
+            <div class="skills__info">
+                <h2 class="title">Professional Skills</h2>
+                {% for name, percent in skillsData %}
+                    <p class="skills__subtitle">{{ name }} <span>{{ percent }}%</span></p>
+                    <progress class="skills__progress" max="100" value="{{ percent }}">
+                        Pumped on <span id="value-{{ percent }}">{{ percent }}</span>%
+                    </progress>
+                {% endfor %}
+            </div>
+            <picture class="skills__image">
+                <img src="./images/skills.jpg" alt="Beautiful picture">
+            </picture>
+        </div>
+    </div>
+</section>

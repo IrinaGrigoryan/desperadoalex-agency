@@ -1,0 +1,22 @@
+<section class="statistics" id="work">
+    <div class="container">
+        <div class="statistics__wrap">
+            <ul class="statistics__list">
+                {% set statistics = [
+                    ['548', 'projects completed'],
+                    ['1465', 'working hours'],
+                    ['612', 'positive feedbacks'],
+                    ['735', 'happy clients']
+                ] %}
+                {% for number, text in statistics %}
+                    <li class="statistics__item">
+                        <p class="statistics__item-content">
+                            <span class="statistics__item-number">{{ number }}</span>
+                            {{ text }}
+                        </p>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</section>

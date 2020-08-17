@@ -1,0 +1,84 @@
+.talk {
+    padding: 100px 0;
+    text-align: center;
+
+    @include breakpoint(medium down) {
+        padding: 50px 0;
+    }
+
+    &__wrapper {
+        margin: 0 auto;
+        max-width: 670px;
+    }
+
+    &__caption {
+        @include breakpoint(medium) {
+            margin: 0 auto;
+            max-width: 80%;
+        }
+    }
+
+    &__form {
+        margin-top: 35px;
+    }
+
+    &__fieldset {
+        border: 0;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__fields {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -1rem;
+    }
+
+    &__field {
+        margin: 0 15px 30px;
+        width: 100%;
+
+        &:first-child,
+        &:nth-child(2){
+            @include breakpoint(medium) {
+                width: calc(50% - 30px);
+            }
+        }
+
+        input,
+        textarea {
+            background-color: $color-white;
+            border: 0;
+            color: lighten($color-black, 28.63);
+            font-family: $typo-1;
+            font-size: 1.6rem;
+            padding: 1rem 2rem;
+            width: 100%;
+
+            @include breakpoint(small down) {
+                font-size: 1.4rem;
+            }
+
+            &::placeholder {
+                color: lighten($color-black, 47.06);
+            }
+        }
+
+        input {
+            height: 4.9rem;
+        }
+
+        textarea {
+            height: 17rem;
+            resize: vertical;
+
+            @include breakpoint(small down) {
+                height: 12rem;
+            }
+        }
+    }
+
+    &__btn {
+        margin: 0;
+    }
+}

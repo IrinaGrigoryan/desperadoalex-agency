@@ -1,0 +1,105 @@
+.footer {
+    background-color: lighten($color-black, 7.84);
+    color: lighten($color-black, 73.73);
+    font-family: $typo-2 ;
+    padding: 8rem 0;
+
+    @include breakpoint(small down) {
+        padding: 5rem 0;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+
+        @include breakpoint(small down) {
+            display: block;
+            text-align: center;
+        }
+    }
+
+    &__copyright {
+        width: 40%;
+
+        @include breakpoint(small down) {
+            width: 100%;
+        }
+
+        h3 {
+            color: $color-white;
+            font-family: $typo-1;
+            font-size: 1.8rem;
+            margin: 0 0 2rem;
+
+            @include breakpoint(small down) {
+                margin: 0 0 0.5rem;
+            }
+        }
+
+        p {
+            font-size: 1.5rem;
+            margin: 0;
+        }
+    }
+
+    &__contacts {
+        width: 35%;
+
+        @include breakpoint(small down) {
+            margin-top: 2rem;
+            width: 100%;
+        }
+
+        a {
+            color: lighten($color-black, 73.73);
+            display: block;
+            font-size: 1.5rem;
+            text-decoration: none;
+
+            @include on-event() {
+                text-decoration: underline;
+            }
+
+            + a {
+                margin-top: 2.3rem;
+
+                @include breakpoint(small down) {
+                    margin-top: 0.5rem;
+                }
+            }
+        }
+    }
+
+    &__links {
+        width: 25%;
+
+        @include breakpoint(small down) {
+            margin-top: 3rem;
+            width: 100%;
+        }
+    }
+
+    &__links-list {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__links-item {
+        font-size: 1.5rem;
+        padding: 0 1rem 0.5rem;
+        width: 50%;
+
+        a {
+            color: lighten($color-black, 73.73);
+            display: block;
+            text-decoration: none;
+
+            @include on-event() {
+                text-decoration: underline;
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+{% set activities = [
+    ['f3a5','ui / ux design', 'Be set fourth land god darkness make it wherein own'],
+    ['f1c9','web development', 'A she\'d them bring void moving third she\'d kind fill'],
+    ['f3cd','app / mobile', 'Dominion man second spirit he, earth they\'re creeping'],
+    ['f11b','game design', 'Morning his saying moveth it multiply appear life be'],
+    ['f674','SEO / marketing', 'Give won\'t after land fill creeping meat you, may'],
+    ['f005','photography', 'Creepeth one seas cattle grass give moving saw give'],
+    ['f0d0','graphic design', 'Open, great whales air rule for, fourth life whales'],
+    ['f576','illustrations', 'Whales likeness hath, man kind for them air two won\'t']
+] %}
+
+<div class="activities" id="services">
+    <div class="container">
+        <div class="activities__wrapper">
+            <ul class="activities__list">
+                {% for icon, title, teaser in activities %}
+                    <li class="activities__item" data-fa-icon="&#x{{ icon }};">
+                        <h3 class="activities__title">{{ title }}</h3>
+                        <p class="activities__teaser text">{{ teaser }}</p>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>

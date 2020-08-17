@@ -1,0 +1,30 @@
+// Main settings for project
+@import "helpers/mixins";
+@import "helpers/fonts";
+@import "helpers/base";
+
+// Import fontAwesome font
+@import '../../node_modules/@fortawesome/fontawesome-free/scss/brands';
+@import '../../node_modules/@fortawesome/fontawesome-free/scss/regular';
+@import '../../node_modules/@fortawesome/fontawesome-free/scss/solid';
+@import '../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome';
+
+
+//Import main partials
+@import "partials/header";
+@import "partials/footer";
+
+//Import components
+@import "components/menu";
+@import "components/intro";
+@import "components/gallery";
+@import "components/statistics";
+@import "components/about";
+@import "components/talk";
+@import "components/skills";
+@import "components/work";
+@import "components/activities";
+@import "components/quotes";
+@import "components/partners";
+
+

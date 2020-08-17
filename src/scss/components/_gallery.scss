@@ -1,0 +1,90 @@
+.gallery {
+    $this: &;
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__item {
+        width: 25%;
+
+        @include breakpoint(medium down) {
+            width: 50%;
+        }
+
+        @include breakpoint(xsmall down) {
+            width: 100%;
+        }
+    }
+
+    &__link {
+        @include on-event() {
+            #{$this}__picture {
+                &::before,
+                &::after {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &__picture {
+        display: block;
+        position: relative;
+
+        &::before {
+            @include absolute(0, 0, 0, 0);
+            @include size(100%);
+            background-color: rgba($color-1--1, 0.85);
+            content: '';
+            opacity: 0;
+            transition: all 250ms ease-in-out;
+        }
+
+        &::after {
+            @include absolute(50%, null, null, 50%);
+            color: $color-white;
+            content: '\f06e';
+            font-family: $font-awesome;
+            font-size: 3rem;
+            opacity: 0;
+            transform: translate(-50%, -50%);
+            transition: all 250ms ease-in-out;
+        }
+
+        img {
+            @include size(100%);
+            display: block;
+        }
+    }
+
+    &__btn-wrap {
+        padding: 40px 0;
+        text-align: center;
+
+        @include breakpoint(small down) {
+            padding: 30px 0;
+        }
+    }
+
+    &__btn {
+        background-color: transparent;
+        border: 0;
+        color: lighten($color-black, 28.63);
+        cursor: pointer;
+        font-size: 1.4rem;
+        font-weight: 700;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: all 250ms ease-in-out;
+
+        @include on-event() {
+            color: $color-1--1;
+            text-decoration: underline;
+        }
+    }
+}

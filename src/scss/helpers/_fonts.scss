@@ -1,0 +1,20 @@
+// Import fonts
+$import-google-font-1: 'https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap&subset=cyrillic';
+$import-google-font-2: 'https://fonts.googleapis.com/css?family=Nunito+Sans:400,700&display=swap';
+
+@if variable-exists(import-google-font-1) {
+  @import url($import-google-font-1);
+}
+
+@if variable-exists(import-google-font-2) {
+  @import url($import-google-font-2);
+}
+
+// Site fonts // http://melchoyce.github.io/fontstacks/
+$typo-1: 'Montserrat', 'Franklin Gothic Medium', Tahoma, sans-serif;
+$typo-2: 'Nunito Sans', 'Segoe UI', Tahoma, sans-serif;
+
+
+//Icons font
+$font-awesome: 'Font Awesome 5 Free';
+$fa-font-path: '../fonts'
